@@ -16,5 +16,24 @@ header{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #00a8ff;
     height: 60px;
+}
 
+#zone_jeu{
+    margin: 10px;
+    width:600px;
+    height:600px;
+    border: solid 2px black;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(3, 100px);
+
+}
+#carte{}
+
+#content{
+    display: flex;
+    width: 100%;
+    height: max-content;
+    justify-content: center;
 }
