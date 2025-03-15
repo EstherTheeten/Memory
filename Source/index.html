@@ -8,11 +8,53 @@
     <title>Memory Game</title>
 </head>
 <body>
+    
     <header>Memory Game</header>
 
+    <div id="mainpage">
+
+        <div id="divform">
+
+            <div id="title">Choose your level</div>
+
+            <form id="level_choice">
+                <div class="form_item">
+                    <label for="grid_size">Grid size</label><br>
+                    <select for="grid_size" id="choice_grid_size">
+                        <option value="">--Select a grid size--</option>
+                        <option value="4x4">4x4</option>
+                        <option value="6x6">6x6</option>
+                    </select>
+                </div>
+
+                <div class="form_item">
+                    <label for="timer">Timer</label><br>
+                    <input type="radio" name="timer_choice" value="yes" id="timer_yes">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" name="timer_choice" value="no" id="timer_no">
+                    <label for="yes">No</label><br>
+                </div>
+                
+
+                <div id="zone_submit_button">
+                    <input type="submit" value="Play" id="submit_button">
+                </div>
+                
+
+                
+            </form>
+            
+            
+        </div>
+    </div>
+    
+
+    <!--
     <div id="content">
         <div id="zone_jeu"></div>
-    </div>
+    </div>   
+    -->
+   
 
     
 
