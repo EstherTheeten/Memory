@@ -12,47 +12,32 @@ form_level.addEventListener("submit", function(event){
     event.preventDefault();
     console.log("formulaire envoyé");
 
-    let val_choice=choice_size.value;
-
-    
+    let val_choice=choice_size.value;  
 })
 
-let display_time_cursor=false;
-choice_timer_yes.addEventListener("click", function(){
-    console.log("aaaaa");
-    display_time_cursor=true;
 
-    if(display_time_cursor){
-        div_time_cursor.innerHTML=`<label for="game_length">Length (seconds):</label>
-                                   <input type="range" id="time_cursor" name="time" min="60" max="600">`
-    }
-    else{
-        div_time_cursor.innerHTML=``;
-    }
+
+
+choice_timer_yes.addEventListener("click", function(){
+    refresh_time_cursor(true)
 })
 
 choice_timer_no.addEventListener("click", function(){
-    console.log("aaaaa");
-    display_time_cursor=false;
+    refresh_time_cursor(false)
+})
 
-    if(display_time_cursor){
-        div_time_cursor.innerHTML=`<label for="game_length">Length (seconds):</label>
-                                   <input type="range" id="time_cursor" name="time" min="60" max="600">`
+function refresh_time_cursor(curs_state){
+    if(curs_state){
+        div_time_cursor.innerHTML=`<label for="game_length">Length (seconds):<br> 60</label>
+                                   <input type="range" id="time_cursor" name="time" min="60" max="600">600`
     }
     else{
         div_time_cursor.innerHTML=``;
     }
+}
 
-})
-
-let time_cursor=document.addEventListener("time_cursor");
+let time_cursor=document.getElementsById("time_cursor");
 time_cursor.addEventListener("input",function(){
-    console.log(time_cursor.value)
+    console.log(time_cursor.value);
 })
 
-
-
-/*
-for(i=0;i<36;i++){
-    zone_jeu.innerHTML+=`<button id="carte",${i}"></button>`;
-}*/
