@@ -43,8 +43,13 @@ header{
 }
 
 .form_item{
+    display: block;
     margin-bottom: 0.8rem;
     font-family: Andale Mono, monospace;
+}
+
+#div_time_cursor{
+    display: none;
 }
 
 #zone_submit_button{
@@ -82,6 +87,23 @@ header{
     font-size: 20px;
     padding-bottom: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #zone_jeu{
     margin: 10px;
