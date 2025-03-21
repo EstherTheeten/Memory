@@ -14,24 +14,30 @@ let time_cursor=document.getElementById("time_cursor");
 let error_message=document.querySelector(".error_message");
 
 form_level.addEventListener("submit", function(event){
-    event.preventDefault();
+
     
     let res=choice_size.value;
 
-    if(res==="none"){
+    //Affichage d'un message d'erreur si aucune taille n'est renseignée
+    if(res!="none"){
+        error_message.style.display="none";
+        
+        if(choice_timer_yes.checked){
+            res+=" "+time_cursor.value;
+        }
+        else{
+            res+=" "+"no_timer";
+        }
+        console.log(res);        
+
+
+
+    }
+    else{
+        event.preventDefault();
         error_message.style.display="inline-block";
     }
-    else{
-        error_message.style.display="none";
-    }
 
-    if(choice_timer_yes.checked){
-        res+=" "+time_cursor.value;
-    }
-    else{
-        res+=" "+"no_timer";
-    }
-    console.log(res)
     
 })
 

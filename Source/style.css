@@ -106,26 +106,6 @@ header{
 
 
 
-
-
-
-
-
-
-
-
-#zone_jeu{
-    margin: 10px;
-    width:600px;
-    height:600px;
-    border: solid 2px black;
-    align-self: center;
-    display: grid;
-    grid-template-columns: repeat(6, 100px);
-    grid-template-rows: repeat(3, 100px);
-
-}
-
 select{
     width:fit-content;
     height: 25px;
