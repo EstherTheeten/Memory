@@ -56,10 +56,10 @@ choice_timer_no.addEventListener("click", function(){
 
 
 
-console.log(time_cursor)
-console.log("bonjour")
+let zone_tps=document.getElementById("zone_tps");
 
 time_cursor.addEventListener("input",function(){
-    console.log(time_cursor.value);
+    //console.log(time_cursor.value);
+    zone_tps.innerHTML=`Length (minutes): ${time_cursor.value}<br>`
 })
 
