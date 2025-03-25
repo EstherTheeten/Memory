@@ -145,3 +145,30 @@ select{
     height: max-content;
     justify-content: center;
 }
+button {
+    background-color: #4d5bec;
+    color: white;
+    font-size: 18px;
+    font-family: Andale Mono, monospace;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #3a4db7;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #2c3a94;
+    transform: scale(0.98);
+}
+#divform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

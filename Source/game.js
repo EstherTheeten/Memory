@@ -67,22 +67,24 @@ function retournercarte(i,j){
         essai1 = [i,j];
     }else if(essai2 == 0){
         essai2 = [i,j];
-    }else{
         if(grille[essai1[0]-1][essai1[1]-1] == grille[essai2[0]-1][essai2[1]-1]){
             trouves.push(grille[essai1[0]-1][essai1[1]-1]);
-        }else{
-            let bouton1 = document.getElementById(`${essai1[0]}x${essai1[1]}`);
-            let bouton2 = document.getElementById(`${essai2[0]}x${essai2[1]}`);
-            let img1= bouton1.querySelector("img");
-            let img2= bouton2.querySelector("img");
-            img1.src = `Images mémory/dos.jpg`;
-            img2.src = `Images mémory/dos.jpg`;
         }
-        
+    }else{
+        if(!(grille[essai1[0]-1][essai1[1]-1] == grille[essai2[0]-1][essai2[1]-1])){
+        let bouton1 = document.getElementById(`${essai1[0]}x${essai1[1]}`);
+        let bouton2 = document.getElementById(`${essai2[0]}x${essai2[1]}`);
+        let img1= bouton1.querySelector("img");
+        let img2= bouton2.querySelector("img");
+        img1.src = `Images mémory/dos.jpg`;            
+        img2.src = `Images mémory/dos.jpg`;
+        }
         essai1 = [i,j];
         essai2 = 0;
         
-        
-        
+    }
+    
+    if(trouves.length === (grid_size*grid_size)/2){
+        window.location.replace("page_victoire.html");
     }
 }
