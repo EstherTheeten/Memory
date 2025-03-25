@@ -25,6 +25,7 @@ if(grid_size=="4x4"){
     grid_size=4;
     zone_jeu.style.gridTemplateColumns="repeat(4,1fr)"
     zone_jeu.style.gridTemplateRows="repeat(4,1fr)"
+    var grille = [[1,2,1,3],[2,4,5,6],[4,6,7,8],[3,5,8,7]];
 }
 else{
     grid_size=6;
@@ -38,6 +39,16 @@ for(let i=1;i<=grid_size;i++){
     for(let j=1;j<=grid_size;j++){
         let bouton=document.createElement("button");
         bouton.setAttribute("id",`${i}x${j}`);
+        let img = document.createElement("img");
+        img.src = "Images mémory/dos.jpg"; //image de base
+        img.alt = "Carte ${i}x${j}";
+        img.style.width = "80px"; 
+        img.style.height = "80px";
+        bouton.appendChild(img);
+
+        bouton.addEventListener("click", () => {
+            img.src = `Images mémory/${grille[i-1][j-1]}.jpg`;
+        });
         bouton.style.gridRow=`${i}/${i+1}`;
         bouton.style.gridColumn=`${j}/${j+1}`;
         zone_jeu.appendChild(bouton);
