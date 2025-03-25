@@ -4,20 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="chemin/vers/le/script.js" defer></script>
+    <script src="start_form.js" defer></script>
     <title>Memory Game</title>
 </head>
 <body>
+    
     <header>Memory Game</header>
 
-    <button type="button">Commencer</button>
+    <div id="mainpage">
 
-    <div id="zone_jeu"></div>
-    <footer>
+        <div id="divform">
+
+            <div id="title">Choose your level</div>
+
+            <form id="level_choice" method="get" action="page_jeu.html">
+                <div class="form_item">
+                    <label for="grid_size">Grid size</label><br>
+                    <select for="grid_size" id="choice_grid_size" name="grid_size">
+                        <option value="none">--Select a grid size--</option>
+                        <option value="4x4">4x4</option>
+                        <option value="6x6">6x6</option>
+                    </select>
+                    <div class="error_message invisible">Please select a valid size</div>
+                </div>
+
+                <div class="form_item">
+                    <label for="timer">Timer</label><br>
+                    <input type="radio" name="timer_choice" value="yes" id="timer_yes">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" name="timer_choice" value="no" id="timer_no" checked>
+                    <label for="yes">No</label><br>
+                </div>
+                
+                <div class="form_item" id="div_time_cursor">
+                    <label for="game_length" id="zone_tps">Length (minutes): 6<br> </label>1
+                    <input type="range" id="time_cursor" name="time" min="1" max="10">10
+                </div>
+
+                <div id="zone_submit_button">
+                    <input type="submit" value="Play" id="submit_button">
+                </div>
+               
+                
+
+                
+            </form>
+            
+            
+        </div>
+   
+    </div>
+     <footer>
         <h5>Jeu créé par Esther THEETEN, Paul FOURNET, Erwann LELU DE BRACH et Faustine COUSIN</h5>
         <h5>Etudiants de CIR2 à l'ISEN Lille</h5>
         <h5>2024-2025</h5>
     </footer>
+
+    <!--
+    <div id="content">
+        <div id="zone_jeu"></div>
+    </div>   
+    -->
+   
+
     
+
+
+
 </body>
 </html>
