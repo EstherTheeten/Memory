@@ -5,7 +5,7 @@ html{
 
 body{
     margin: 0px;
-    background-color: aliceblue;
+    background-color: #b5b9e0;
 }
 
 header{
@@ -14,7 +14,27 @@ header{
     justify-content: center;
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #00a8ff;
+    background-color: #4d5bec;
     height: 60px;
 
 }
+
+footer {
+    background: #4d5bec;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
