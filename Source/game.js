@@ -49,7 +49,7 @@ if(timer_choice){
             window.location.replace("page_defaite.html");
         }
     }
-    setInterval(refresh_counter,10);
+    setInterval(refresh_counter,1000);
 
 }
 else{
