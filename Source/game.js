@@ -19,6 +19,47 @@ let timer_val=params_objet.time;
 
 console.log(grid_size);
 
+
+
+
+
+//Gestion du temps
+let div_timer=document.getElementById("div_timer");
+let div_timer_text=document.getElementById("div_timer_text");
+let progress_bar_comp=document.getElementById("progress_bar_comp");
+if(timer_choice){
+
+    div_timer_text.innerHTML=`Time Left : ${timer_val}:00`;
+    console.log(timer_choice);
+    seconds=timer_val*60;
+
+    progress_bar_comp.style.animation=`anim_progress_bar ${seconds}s linear`;
+
+    function refresh_counter(){
+        seconds-=1;
+        minutes=Math.floor(seconds/60);
+        if(seconds%60<10){
+            div_timer_text.innerHTML=`Time left : ${minutes}:0${seconds%60}`;
+        }
+        else{
+            div_timer_text.innerHTML=`Time left : ${minutes}:${seconds%60}`;
+        }
+
+        if(seconds===0){
+            window.location.replace("page_defaite.html");
+        }
+    }
+    setInterval(refresh_counter,10);
+
+}
+else{
+    div_timer.style.display="none";
+}
+
+
+
+
+
 //Affichage de la grille
 let zone_jeu=document.getElementById("zone_jeu");
 if(grid_size=="4x4"){
@@ -43,7 +84,7 @@ for(let i=1;i<=grid_size;i++){
         let bouton=document.createElement("button");
         bouton.setAttribute("id",`${i}x${j}`);
         let img = document.createElement("img");
-        img.src = "Images mémory/dos.jpg"; //image de base
+        img.src = "Images mémory/dos.png"; //image de base
         img.alt = "Carte ${i}x${j}";
         img.style.width = "80px"; 
         img.style.height = "80px";
@@ -55,6 +96,7 @@ for(let i=1;i<=grid_size;i++){
         });
         bouton.style.gridRow=`${i}/${i+1}`;
         bouton.style.gridColumn=`${j}/${j+1}`;
+        bouton.style.padding="0px";
         zone_jeu.appendChild(bouton);
     }
 }
@@ -76,8 +118,8 @@ function retournercarte(i,j){
         let bouton2 = document.getElementById(`${essai2[0]}x${essai2[1]}`);
         let img1= bouton1.querySelector("img");
         let img2= bouton2.querySelector("img");
-        img1.src = `Images mémory/dos.jpg`;            
-        img2.src = `Images mémory/dos.jpg`;
+        img1.src = `Images mémory/dos.png`;            
+        img2.src = `Images mémory/dos.png`;
         }
         essai1 = [i,j];
         essai2 = 0;
@@ -88,3 +130,6 @@ function retournercarte(i,j){
         window.location.replace("page_victoire.html");
     }
 }
+
+
+

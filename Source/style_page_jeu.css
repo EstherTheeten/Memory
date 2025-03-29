@@ -14,3 +14,44 @@
     grid-template-rows: repeat(4, 1fr);*/
 
 }
+
+#div_timer{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding:10px;
+    border:solid black 1px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: Andale Mono, monospace;
+}
+
+#progress_bar{
+    margin: 10px;
+    width: 170px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 6px;
+}
+
+
+@keyframes anim_progress_bar {
+    from{
+        width: inherit;
+    }
+    to{
+        width: 0px;
+    }
+}
+#progress_bar_comp{
+    width:inherit;
+    height: inherit;
+    background-color: blue;
+    border-radius: 6px;
+}
+
