@@ -75,6 +75,10 @@ else{
     grid_size=6;
     zone_jeu.style.gridTemplateColumns="repeat(6,1fr)";
     zone_jeu.style.gridTemplateRows="repeat(6,1fr)";
+    var grille = [[1,2,1,3,2,4],[9,10,11,12,5,6],[12,10,4,6,7,8],[11,9,3,5,8,7],[13,14,15,14,17,18],[17,16,15,13,16,18]];
+    var trouves = [];
+    var essai1 = 0;
+    var essai2 = 0;
 }
 
 //Ajout des boutons

@@ -1,13 +1,13 @@
 #zone_jeu{
     margin: 10px;
-    width:400px;
-    height:400px;
+    width:550px;
+    height:550px;
     border: solid 2px black;
     align-self: center;
     display: grid;
 
-    min-width: 400px;
-    min-height: 400px;
+    min-width: 550px;
+    min-height: 550px;
 
     /*A MODIFIER EN JS*/
     /*grid-template-columns: repeat(4, 1fr);
