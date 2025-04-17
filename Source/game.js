@@ -88,10 +88,11 @@ for(let i=1;i<=grid_size;i++){
         let bouton=document.createElement("button");
         bouton.setAttribute("id",`${i}x${j}`);
         let img = document.createElement("img");
+        img.setAttribute("class","game_image");
         img.src = "Images mémory/dos.png"; //image de base
         img.alt = "Carte ${i}x${j}";
-        img.style.width = "80px"; 
-        img.style.height = "80px";
+        img.style.width = "95%"; 
+        img.style.height = "95%";
         bouton.appendChild(img);
 
         bouton.addEventListener("click", () => {

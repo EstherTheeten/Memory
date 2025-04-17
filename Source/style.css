@@ -26,7 +26,7 @@ header{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 105%;
+    height: 117%;
 
 }
 
@@ -144,6 +144,7 @@ select{
 
 #content{
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: max-content;
     justify-content: center;
