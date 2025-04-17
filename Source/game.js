@@ -19,14 +19,12 @@ let timer_val=params_objet.time;
 
 console.log(grid_size);
 
-
-
-
-
 //Gestion du temps
 let div_timer=document.getElementById("div_timer");
 let div_timer_text=document.getElementById("div_timer_text");
 let progress_bar_comp=document.getElementById("progress_bar_comp");
+seconds = 0;
+total_seconds = 0;
 if(timer_choice){
 
     div_timer_text.innerHTML=`Time Left : ${timer_val}:00`;

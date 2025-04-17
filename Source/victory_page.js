@@ -8,6 +8,6 @@ let timer_choice=urlParams.get("timer_choice");
 
 let time_spent=total_seconds-seconds;
 
-if(timer_choice){
+if(timer_choice == "true"){
     zone_result_time.innerHTML=`Your time : ${Math.floor(time_spent/60)}:${time_spent%60}`;
 }
