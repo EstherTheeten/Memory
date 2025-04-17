@@ -155,6 +155,8 @@ function retournercarte(i, j) {
 
         if (grille[essai1[0] - 1][essai1[1] - 1] === grille[essai2[0] - 1][essai2[1] - 1]) {
             trouves.push(grille[essai1[0] - 1][essai1[1] - 1]);
+            document.getElementById(`${essai1[0]}x${essai1[1]}`).style.backgroundColor = "#9aeab1";
+            document.getElementById(`${essai2[0]}x${essai2[1]}`).style.backgroundColor = "#9aeab1";
             essai1 = 0;
             essai2 = 0;
         } else {
