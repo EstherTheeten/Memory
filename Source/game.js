@@ -172,7 +172,7 @@ function retournercarte(i, j) {
     }
 
     if (trouves.length === (grid_size * grid_size) / 2) {
-        window.location.replace("page_victoire.html");
+        window.location.replace(`page_victoire.html?seconds=${seconds}&total_seconds=${timer_val*60}&timer_choice=${timer_choice}`);
     }
 }
 
@@ -197,4 +197,3 @@ function montrerCartesDepart() {
         verrouille = false; // on autorise les clics
     }, 3000);
 }
-
